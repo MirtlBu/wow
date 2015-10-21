@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    margin: 0;
+}
+
+.logo {
+    width: 160px;
+}
+
+.button {
+    height: 42px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.welcome {
+    background: url(../img/bg_welcome.jpg);
+    color: #fff;
+}
+
+.welcome__top {
+    font-size: 0;
+    margin-bottom: 10px;
+}
+
+.welcome__logo {
+    vertical-align: middle;
+}
+
+.social, .logo-wrap {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.social {
+    text-align: right;
+}
+
+.social__item {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 10px;
+    background: url(../img/social_white.png) no-repeat;
+    background-repeat: no-repeat;
+    transition: background .2s;
+}
+
+.social__item:hover {
+    background: url(../img/social_color.png) no-repeat;
+}
+
+.social__item-twitter, .social__item-twitter:hover {
+    background-size: 72px;
+    background-position: 0 0;
+}
+
+.social__item-facebook, .social__item-facebook:hover {
+    background-size: 72px;
+    background-position: -24px 0;
+}
+
+.social__item-instagram, .social__item-instagram:hover {
+    background-size: 72px;
+    background-position: -48px 0;
+}
+
+.welcome__header {
+    margin-bottom: 10px;
+}
+
+.welcome__text {
+    margin-bottom: 10px;
+}
+
+.welcome__button {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #10315d;
+    font-size: 18px;
+    transition: background .2s, color .2s;
+}
+
+.welcome__button:hover {
+    background: #10315d;
+    color: #fff;
+}
