@@ -6,6 +6,30 @@ body, html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+::-webkit-input-placeholder {
+   color: #325585;
+   opacity: .8;
+   font-family: 'Raleway', sans-serif;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #325585;
+   opacity: .8;
+   font-family: 'Raleway', sans-serif;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #325585;
+   opacity: .8;
+   font-family: 'Raleway', sans-serif;
+}
+
+:-ms-input-placeholder {
+   color: #325585;
+   opacity: .8;
+   font-family: 'Raleway', sans-serif;
+}
+
 .container {
     padding: 30px;
     box-sizing: border-box;
@@ -14,14 +38,14 @@ body, html {
 }
 
 .header {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .logo {
     width: 160px;
 }
 
-.button {
+.button, .input {
     height: 42px;
     padding: 6px 12px;
     box-sizing: border-box;
@@ -30,6 +54,9 @@ body, html {
     outline: none;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+}
+
+.button {
     cursor: pointer;
 }
 
@@ -41,7 +68,8 @@ body, html {
 }
 
 .welcome {
-    background: url(../img/bg_welcome.jpg);
+    background: url(../img/bg_welcome.jpg) no-repeat;
+    background-attachment: fixed;
     color: #fff;
     text-align: center;
 }
@@ -94,10 +122,6 @@ body, html {
     background-position: -48px 0;
 }
 
-.welcome__header {
-    margin-bottom: 10px;
-}
-
 .welcome__text {
     margin-bottom: 15px;
 }
@@ -142,10 +166,6 @@ body, html {
     text-align: center;
 }
 
-.characters__header {
-    margin-bottom: 10px;
-}
-
 .characters__info {
     margin-bottom: 30px;
 }
@@ -182,4 +202,39 @@ body, html {
 
 .characters__item {
     margin-bottom: 30px;
+}
+
+.subscribe {
+    background: url(../img/bg_subscribe.jpg) no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+.subscribe__info {
+    margin-bottom: 30px;
+}
+
+.subscribe__input {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+}
+
+.subscribe__input:focus {
+    border: 1px solid #10315d;
+}
+
+.subscribe__button {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #10315d;
+    font-size: 18px;
+    transition: background .2s, color .2s;
+}
+
+.subscribe__button:hover {
+    background: #10315d;
+    color: #fff;
 }
