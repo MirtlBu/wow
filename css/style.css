@@ -33,9 +33,17 @@ body, html {
     cursor: pointer;
 }
 
+.title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .welcome {
     background: url(../img/bg_welcome.jpg);
     color: #fff;
+    text-align: center;
 }
 
 .welcome__top {
@@ -91,7 +99,7 @@ body, html {
 }
 
 .welcome__text {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .welcome__button {
@@ -106,4 +114,72 @@ body, html {
 .welcome__button:hover {
     background: #10315d;
     color: #fff;
+}
+
+.features {
+    background: #325585;
+    font-size: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.features__item {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.features__img {
+    margin-bottom: 10px;
+}
+
+.features__text {
+    margin-bottom: 10px;
+}
+
+.characters {
+    background: #fff;
+    color: #10315d;
+    text-align: center;
+}
+
+.characters__header {
+    margin-bottom: 10px;
+}
+
+.characters__info {
+    margin-bottom: 30px;
+}
+
+.character__img {
+    height: 300px;
+}
+
+.characters__main {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.characters__main:before, .characters__main:after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: #10315d;
+    opacity: .5;
+}
+
+.characters__main:before {
+    top: 0;
+}
+
+.characters__main:after {
+    bottom: 0;
+}
+
+.characters__item {
+    margin-bottom: 30px;
 }
