@@ -3,14 +3,14 @@
     <head>
         <title>Everlasting Summer</title>
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
         <link rel="stylesheet" href="css/animate.css" type="text/css">
+        <link rel="stylesheet" href="css/slick.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="welcome">
+        <div class="welcome" id="welcome">
             <div class="container">
                 <div class="welcome__top">
                     <div class="logo-wrap">
@@ -35,26 +35,26 @@
                 </div>
             </div>
         </div>
-        <div class="features">
+        <div class="features" id="features">
             <div class="container">
-                <div class="features__item wow fadeIn">
+                <div class="features__item wow zoomIn">
                     <img class="features__img" alt="interface" src="img/icon_char.png">
                     <div class="features__title title">Interface</div>
                     <div class="features__text">The game uses texts and sprites in a manner similar to many Japanese visual novels.</div>
                 </div>
-                <div class="features__item wow fadeIn">
+                <div class="features__item wow zoomIn">
                     <img class="features__img" alt="development" src="img/icon_soundtrack.png">
                     <div class="features__title title">Development</div>
                     <div class="features__text">Game development started in May 2008 based off an image posted to the Russian IIchan imageboard.</div>
                 </div>
-                <div class="features__item wow fadeIn">
+                <div class="features__item wow zoomIn">
                     <img class="features__img" alt="feedback" src="img/icon_review.png">
                     <div class="features__title title">Feedback</div>
                     <div class="features__text">Two Russian-language gaming sites, itndaily and Канобу, gave it generally positive reviews.</div>
                 </div>
             </div>
         </div>
-        <div class="characters">
+        <div class="characters" id="characters">
             <div class="container">
                 <div class="characters__top">
                     <h2 class="characters__header header">Characters in game</h2>
@@ -103,7 +103,7 @@
                 </form>
             </div>
         </div>
-        <div class="reviews">
+        <div class="reviews" id="reviews">
             <div class="container">
                 <h2 class="reviews__header header">Gamers about it</h2>
                 <div class="reviews__info">Does Russian visual novel Everlasting Summer bring eternal happiness, or is it an everlasting nightmare?</div>
@@ -132,8 +132,52 @@
                 </div>
             </div>
         </div>
+        <div class="slider">
+            <div class="container">
+                <div class="slick">
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_1.png">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_2.png">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_3.png">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_4.png">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_5.png">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__img" alt="brands" src="img/partners_6.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="nav">
+                    <div class="nav__item">
+                        <a class="nav__link" href="#welcome">About</a>
+                    </div>
+                    <div class="nav__item">
+                        <a class="nav__link" href="#features">Features</a>
+                    </div>
+                    <div class="nav__item">
+                        <a class="nav__link" href="#characters">Characters</a>
+                    </div>
+                    <div class="nav__item">
+                        <a class="nav__link" href="#reviews">Reviews</a>
+                    </div>
+                </div>
+                <img class="footer__logo logo" alt="logo" src="img/logo.png">
+                <div class="rights">All Rights Reserved © - 2015</div>
+            </div>
+        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+        <script src="js/slick.min.js" type="text/javascript"></script>
         <script src="js/wow.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
 
