@@ -9,6 +9,13 @@
         autoplaySpeed: 2000,
         responsive: [
         {
+          breakpoint: 1200,
+          settings: {
+            arrows: true,
+            slidesToShow: 4
+          }
+        },
+        {
           breakpoint: 768,
           settings: {
             arrows: true,
