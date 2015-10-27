@@ -126,7 +126,7 @@ body, html {
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     background-size: 144px 24px;
-    transition: background .2s;
+    transition: background .1s;
 }
 
 .social__item-twitter {
@@ -142,7 +142,7 @@ body, html {
 }
 
 .social__item:hover {
-    opacity: .5;
+    background-image: url(../img/spritesheet_inv.png);
 }
 
 .welcome__text {
@@ -159,7 +159,7 @@ body, html {
     background: #fff;
     color: #10315d;
     font-size: 18px;
-    transition: background .2s, color .2s;
+    transition: background .1s, color .1s;
 }
 
 .welcome__button:hover {
@@ -259,7 +259,7 @@ body, html {
     background: #fff;
     color: #10315d;
     font-size: 18px;
-    transition: background .2s, color .2s;
+    transition: background .1s, color .1s;
 }
 
 .subscribe__button:hover {
@@ -327,11 +327,12 @@ body, html {
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     background-size: 144px 24px;
-    transition: background .2s;
+    transition: background .1s;
     cursor: pointer;
     outline: none;
     border: none;
     font-size: 0;
+    z-index: 9999;
 }
 
 .slick-next {
@@ -345,7 +346,7 @@ body, html {
 }
 
 .slick-arrow:hover {
-    opacity: .5;
+    background-image: url(../img/spritesheet_inv.png);
 }
 
 .footer {
@@ -406,8 +407,6 @@ body, html {
 
     .welcome__content {
         padding: 50px 0;
-        /*position: relative;
-        z-index: 0;*/
     }
 
     .welcome__info {
@@ -534,6 +533,12 @@ body, html {
     .logo {
         width: 350px;
     }
+
+    /*.button, .input {
+        max-width: 350px;
+        display: block;
+        margin: 0 auto;
+    }*/
 
     .social__item {
         width: 48px;
