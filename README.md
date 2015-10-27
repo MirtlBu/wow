@@ -1,1 +1,1 @@
-# Landing for testing wow.js
+# Landing for testing plugins.
