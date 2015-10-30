@@ -6,6 +6,10 @@ body, html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 ::-webkit-input-placeholder {
    color: #325585;
    opacity: .8;
@@ -133,8 +137,8 @@ body, html {
     background-position: -120px 0;
 }
 
-.social__item-instagram {
-    background-position: -96px 0;
+.social__item-googleplus {
+    background-position: -72px 0;
 }
 
 .social__item-facebook {
@@ -155,10 +159,13 @@ body, html {
 
 .welcome__button {
     width: 100%;
+    display: block;
     margin-bottom: 10px;
+    padding: 10px 12px;
     background: #fff;
     color: #10315d;
     font-size: 18px;
+    text-align: center;
     transition: background .1s, color .1s;
 }
 
@@ -229,6 +236,50 @@ body, html {
 
 .characters__item {
     margin-bottom: 30px;
+}
+
+.charts {
+    background-color: #10315d;
+    color: #fff;
+    text-align: center;
+}
+
+.bar-chart {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.chart__month {
+    display: none;
+}
+
+.chart__switcher {
+    text-align: left;
+}
+
+.chart__control {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.chart__control:hover {
+    border: 1px solid #10315d;
+    background-color: #fff;
+    color: #10315d;
+    opacity: .5;
+}
+
+.chart__control--active {
+    border: 1px solid #10315d;
+    background-color: #fff;
+    color: #10315d;
 }
 
 .subscribe {
@@ -374,7 +425,6 @@ body, html {
 
 .nav__link {
     color: #fff;
-    text-decoration: none;
     border-bottom: 1px solid #fff;
 }
 
@@ -445,8 +495,8 @@ body, html {
         background-position: -160px 0;
     }
 
-    .social__item-instagram {
-        background-position: -128px 0;
+    .social__item-googleplus {
+        background-position: -96px 0;
     }
 
     .social__item-facebook {
@@ -483,6 +533,10 @@ body, html {
         height: 0;
     }
 
+    .bar-chart {
+        margin-bottom: 30px;
+    }
+
     .slick-arrow {
         width: 32px;
         height: 32px;
@@ -491,12 +545,12 @@ body, html {
     }
 
     .slick-next {
-        right: -30px;
+        right: -35px;
         background-position: 0 0;
     }
 
     .slick-prev {
-        left: -30px;
+        left: -35px;
         background-position: -32px 0;
     }
 
@@ -524,7 +578,7 @@ body, html {
     }
 }
 
-@media  (min-width: 1200px) {
+@media  (min-width: 1000px) {
 
     .container {
         padding: 100px 50px;
@@ -533,12 +587,6 @@ body, html {
     .logo {
         width: 350px;
     }
-
-    /*.button, .input {
-        max-width: 350px;
-        display: block;
-        margin: 0 auto;
-    }*/
 
     .social__item {
         width: 48px;
@@ -551,8 +599,8 @@ body, html {
         background-position: -240px 0;
     }
 
-    .social__item-instagram {
-        background-position: -192px 0;
+    .social__item-googleplus {
+        background-position: -144px 0;
     }
 
     .social__item-facebook {
@@ -576,15 +624,19 @@ body, html {
     }
 
     .characters__col {
-        width: 35%;
+        width: 32%;
     }
 
     .characters__main {
-        width: 30%;
+        width: 36%;
     }
 
-    .character__img {
-        height: 350px;
+    .chart__ind {
+        display: none;
+    }
+
+    .chart__month {
+        display: block;
     }
 
     .subscribe-container, .footer-container {
@@ -603,12 +655,12 @@ body, html {
     }
 
     .slick-next {
-        right: -30px;
+        right: -50px;
         background-position: 0 0;
     }
 
     .slick-prev {
-        left: -30px;
+        left: -50px;
         background-position: -48px 0;
     }
 
@@ -629,3 +681,10 @@ body, html {
         text-align: center;
     }
 }
+
+@media  (min-width: 1200px) {
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
