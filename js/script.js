@@ -132,11 +132,17 @@
 
     showChart(chartdata['2013']);
 
+    var currentYear;
+
     $('.charts').on('click', '.chart__control', function() {
         $('.chart__control').removeClass('chart__control--active');
         $(this).addClass('chart__control--active');
-        var year = $(this).attr('data-year');
-        showChart(chartdata[year]);
+        currentYear = $(this).attr('data-year');
+        showChart(chartdata[currentYear]);
+    });
+
+    $(window).resize(function() {
+        showChart(chartdata[currentYear]);
     });
 
 })()
