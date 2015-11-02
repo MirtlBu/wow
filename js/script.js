@@ -60,32 +60,55 @@
         '2014': dataMaker(),
         '2015': dataMaker()
     }
-
-    var w = $('.bar-chart').width(),
-        h = 150;
+    var svgSize = {
+        h: 150,
+        w: function() {
+            return $('.bar-chart').width()
+        }
+    }
 
     var svg = d3.select('.bar-chart')
         .append('svg')
-        .attr('width', w)
-        .attr('height', h);
+        .attr('width', svgSize.w())
+        .attr('height', svgSize.h);
 
     function showChart(year) {
-        var bw = w / year.length;
+        svg.attr('width', svgSize.w());
+        var bw = svgSize.w() / year.length;
+
         var elems = svg.selectAll('rect');
 
         if(elems[0].length > 1) {
             svg.selectAll('.chart__rect')
                .data(year)
                .transition()
+               .attr('x', function(d, i) {
+                    return i * bw
+                })
+               .attr('width', function(d) {
+                    console.log(bw);
+                    return bw - bw/10
+                })
                .attr('y', function(d) {
-                    return h - (d.num) - 25;
+                    return svgSize.h - (d.num) - 25;
                })
                .attr('height', function(d) {
                     return d.num;
                });
+
+            svg.selectAll('.chart__month')
+                .data(year)
+                   .attr('x', function(d, i) {
+                        return i * bw + (bw - bw/10) / 2
+                    });
+
+            svg.selectAll('.chart__ind')
+                .data(year)
+                   .attr('x', function(d, i) {
+                        return i * bw + (bw - bw/10) / 2
+                    });
         }
         else {
-
             function elem(e) {
                 return svg.selectAll('stuff')
                             .data(year)
@@ -96,10 +119,11 @@
                                 return e == 'rect' ? i * bw : i * bw + (bw - bw/10) / 2
                             })
                             .attr('width', function(d) {
+                                console.log(bw);
                                 return e == 'rect' ? bw - bw/10 : 0
                             })
                             .attr('y', function(d) {
-                                return e == 'rect' ? h - 25 : h - 5
+                                return e == 'rect' ? svgSize.h - 25 : svgSize.h - 5
                             })
                             .attr('height', function(d) {
                                 return 0;
@@ -112,7 +136,7 @@
             elem('rect').attr('class', 'chart__rect')
                         .transition()
                         .attr('y', function(d) {
-                            return h - (d.num) - 25;
+                            return svgSize.h - (d.num) - 25;
                         })
                         .attr('height', function(d) {
                             return d.num;
@@ -130,9 +154,9 @@
         }
     }
 
-    showChart(chartdata['2013']);
+    var currentYear = '2013';
 
-    var currentYear;
+    showChart(chartdata[currentYear]);
 
     $('.charts').on('click', '.chart__control', function() {
         $('.chart__control').removeClass('chart__control--active');
