@@ -89,7 +89,7 @@ a {
 }
 
 .welcome {
-    height: 100%;
+    min-height: 100%;
     background-color: #325585;
     background-image: url(../img/bg_welcome.jpg);
     background-repeat: no-repeat;
